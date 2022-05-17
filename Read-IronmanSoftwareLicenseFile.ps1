@@ -59,7 +59,7 @@ Function Read-IronmanSoftwareLicenseFile {
     [int32]$license_content_line_count = $license_content.count
     If( $license_content_line_count -eq 0)
     {
-        Write-Host "Error: The license file [$PathToLicense]"
+        Write-Host "Error: The license file [$PathToLicense] exists but somehow has 0 lines. Please fix the file and try again."
     }
     ElseIf( $license_content_line_count -gt 1)
     {
@@ -122,7 +122,7 @@ Function Read-IronmanSoftwareLicenseFile {
     {
         [array]$error_clone = $Error.Clone()
         [string]$error_message = $error_clone | Where-Object { $null -ne $_.Exception } | Select-Object -First 1 | Select-Object -ExpandProperty Exception
-        Write-Host "Error: Removing the xsi and xsd attributes from the [System.Xml.XmlLinkedNode] failed due to  [$error_message]"
+        Write-Host "Error: Removing the xsi and xsd attributes from the XmlLinkedNode object failed due to [$error_message]"
         Return
     }
     $Error.Clear()
@@ -134,7 +134,7 @@ Function Read-IronmanSoftwareLicenseFile {
     {
         [array]$error_clone = $Error.Clone()
         [string]$error_message = $error_clone | Where-Object { $null -ne $_.Exception } | Select-Object -First 1 | Select-Object -ExpandProperty Exception
-        Write-Host "Error: Converting the license terms XML linked node object to a PSCustomObject failed due to  [$error_message]"
+        Write-Host "Error: Converting the license terms XML linked node object to a PSCustomObject failed due to [$error_message]"
         Return
     }
     Return $terms_object
