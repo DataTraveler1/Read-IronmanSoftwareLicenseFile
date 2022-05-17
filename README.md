@@ -3,7 +3,9 @@
 
 ## Purpose
 
-The problem that this script solves is to make it easier to decode the contents of the license file. This is intended for troubleshooting.
+The problem that this script solves is to make it easier to decode the contents of the license file (i.e. license.txt or license.lic).
+
+This is intended for troubleshooting.
 
 ## Visuals
 
