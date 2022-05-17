@@ -47,10 +47,12 @@ Function Read-IronmanSoftwareLicenseFile {
         Return
     }
     $Error.Clear()
-    Try {
+    Try
+    {
         [array]$license_content = Get-Content -Path "$PathToLicense" -Force
     }
-    Catch {
+    Catch
+    {
         [array]$error_clone = $Error.Clone()
         [string]$error_message = $error_clone | Where-Object { $null -ne $_.Exception } | Select-Object -First 1 | Select-Object -ExpandProperty Exception
         Write-Host "Error: Get-Content failed to get the license file [$PathToLicense] due to [$error_message]"
@@ -67,10 +69,12 @@ Function Read-IronmanSoftwareLicenseFile {
         Return
     }    
     $Error.Clear()
-    Try {
+    Try
+    {
         [xml]$license_xml_object = [xml]$license_content
     }
-    Catch {
+    Catch
+    {
         [array]$error_clone = $Error.Clone()
         [string]$error_message = $error_clone | Where-Object { $null -ne $_.Exception } | Select-Object -First 1 | Select-Object -ExpandProperty Exception
         Write-Host "Error: Casting the license content string [$license_content] failed due to [$error_message]"
