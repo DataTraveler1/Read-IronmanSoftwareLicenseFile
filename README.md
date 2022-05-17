@@ -16,6 +16,10 @@ The problem that this script solves is to make it easier to decode the contents 
 
 ## Versions
 
+#### 1.0.2
+
+Another cleanup fix 😑
+
 #### 1.0.1
 
 Small housekeeping fix 🧹
