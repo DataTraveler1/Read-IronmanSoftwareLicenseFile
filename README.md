@@ -5,15 +5,15 @@
 
 The problem that this script solves is to make it easier to decode the contents of the license file (i.e. license.txt or license.lic)
 
-This is intended for troubleshooting
+This is intended for troubleshooting. Licensed users should raise a support case at ironmansoftware.com if there are concerns about license file.
 
 ## Visuals
 
 ![image](https://user-images.githubusercontent.com/537287/168902731-bece4b5b-3c6d-440f-ab51-954c484e99fe.png)
 
-## Warnings
+## ⚠ Warning ⚠
 
-Use your own peril! Do not share details of your license outside of Ironman Software support
+Never share the details of your license outside of Ironman Software support.
 
 ## Versions
 
