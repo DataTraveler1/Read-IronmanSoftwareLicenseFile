@@ -29,7 +29,7 @@ Function Read-IronmanSoftwareLicenseFile {
     {
         [string]$PathToLicense = Read-Host -Prompt 'Please provide the path to license.txt or license.lic (Example: c:\temp\license.txt)'
     }
-    ElseIf(($null -ne $FindMyPoshLicense) -and ($PathToLicense_length -eq 0))
+    ElseIf(($FindMyPoshLicense -eq $true) -and ($PathToLicense_length -eq 0))
     {
         If(( Test-Path -Path "$env:APPDATA\PowerShell Pro Tools\license.lic") -eq $true)
         {
